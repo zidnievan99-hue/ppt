@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi: Konsep Dasar Manajemen Keuangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            min-height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 4rem;
+            box-sizing: border-box;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .slide.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #cbd5e1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-dot.active {
+            background-color: #1e40af;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigasi Slide -->
+    <div id="slide-nav" class="slide-nav"></div>
+
+    <div id="presentation-container">
+        <!-- Slide 1: Judul -->
+        <section id="slide-1" class="slide bg-gradient-to-br from-blue-900 to-slate-800 text-white text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">Konsep Dasar Manajemen Keuangan</h1>
+            <p class="text-xl md:text-2xl text-blue-200">Sebuah Pengantar untuk Memahami Dunia Keuangan Perusahaan</p>
+        </section>
+
+        <!-- Slide 2: Definisi -->
+        <section id="slide-2" class="slide">
+            <h2 class="text-4xl font-bold mb-8 text-blue-800">Apa itu Manajemen Keuangan?</h2>
+            <blockquote class="bg-blue-50 border-l-4 border-blue-500 text-slate-700 p-6 mb-8 max-w-3xl text-center shadow-md rounded-r-lg">
+                <p class="text-lg italic">"Penggabungan dari <strong class="text-blue-700">ilmu dan seni</strong> yang membahas, mengkaji, dan menganalisis tentang bagaimana seorang manajer keuangan mempergunakan seluruh sumber daya perusahaan untuk <strong class="text-blue-700">mencari, mengelola, dan membagi dana</strong>."</p>
+            </blockquote>
+            <div class="w-full max-w-3xl">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Tujuan Utama:</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <svg class="w-12 h-12 mx-auto mb-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M12 6h.01M6 12h.01M18 12h.01M7 7h.01M17 7h.01M7 17h.01M17 17h.01"></path></svg>
+                        <p class="font-semibold">Memberikan Profit</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <svg class="w-12 h-12 mx-auto mb-3 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        <p class="font-semibold">Menciptakan Kemakmuran</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <svg class="w-12 h-12 mx-auto mb-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <p class="font-semibold">Menjamin Keberlanjutan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Tiga Kegiatan Utama -->
+        <section id="slide-3" class="slide bg-slate-100">
+            <h2 class="text-4xl font-bold mb-12 text-blue-800">Aktivitas Inti Manajer Keuangan</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl w-full">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-green-100 rounded-full p-4 inline-block mb-4"><svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div>
+                    <h3 class="text-2xl font-bold mb-2">1. Perolehan Dana</h3>
+                    <p class="text-slate-600">Bagaimana perusahaan mendapatkan modal? (saham, obligasi, pinjaman).</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                     <div class="bg-blue-100 rounded-full p-4 inline-block mb-4"><svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div>
+                    <h3 class="text-2xl font-bold mb-2">2. Penggunaan Dana</h3>
+                    <p class="text-slate-600">Bagaimana dana diinvestasikan pada aset? (mesin, pabrik, teknologi).</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-purple-100 rounded-full p-4 inline-block mb-4"><svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div>
+                    <h3 class="text-2xl font-bold mb-2">3. Pengelolaan Aset</h3>
+                    <p class="text-slate-600">Bagaimana aset dikelola secara efisien untuk mencapai tujuan?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Perkembangan Teori -->
+        <section id="slide-4" class="slide">
+            <h2 class="text-4xl font-bold mb-12 text-blue-800">Evolusi Pemikiran Keuangan</h2>
+            <div class="relative max-w-4xl w-full">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 h-full w-1 bg-blue-200 rounded -translate-x-1/2"></div>
+                <!-- Timeline items -->
+                <div class="space-y-12">
+                    <div class="relative">
+                        <div class="absolute left-1/2 top-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-1/2 -translate-y-1/2 border-4 border-white"></div>
+                        <div class="w-2/5"></div>
+                        <div class="w-2/5 absolute left-1/2 top-1/2 -translate-y-1/2 ml-8">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold">Awal</h3><p class="text-sm text-slate-600">Deskriptif, fokus pada pandangan pihak luar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute left-1/2 top-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-1/2 -translate-y-1/2 border-4 border-white"></div>
+                        <div class="w-2/5 absolute right-1/2 top-1/2 -translate-y-1/2 mr-8 text-right">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold">1960-70an</h3><p class="text-sm text-slate-600">Fokus memaksimalkan nilai perusahaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute left-1/2 top-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-1/2 -translate-y-1/2 border-4 border-white"></div>
+                        <div class="w-2/5"></div>
+                        <div class="w-2/5 absolute left-1/2 top-1/2 -translate-y-1/2 ml-8">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold">1980an</h3><p class="text-sm text-slate-600">Analisis meluas: inflasi, deregulasi, komputer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute left-1/2 top-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-1/2 -translate-y-1/2 border-4 border-white"></div>
+                        <div class="w-2/5 absolute right-1/2 top-1/2 -translate-y-1/2 mr-8 text-right">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold">1990an</h3><p class="text-sm text-slate-600">Fokus pada Keuangan Internasional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                         <div class="absolute left-1/2 top-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-1/2 -translate-y-1/2 border-4 border-white"></div>
+                        <div class="w-2/5"></div>
+                        <div class="w-2/5 absolute left-1/2 top-1/2 -translate-y-1/2 ml-8">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold">Modern</h3><p class="text-sm text-slate-600">Pendekatan *Behavioral Finance*.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5 & 6: Teori Kunci -->
+        <section id="slide-5" class="slide bg-slate-100">
+             <h2 class="text-4xl font-bold mb-12 text-blue-800">Landasan Teori Manajemen Keuangan</h2>
+             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Pasar Modal Efisien</h3>
+                    <p class="text-sm text-slate-600">Harga saham mencerminkan semua informasi yang tersedia.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Struktur Modal</h3>
+                    <p class="text-sm text-slate-600">Keseimbangan antara utang dan modal sendiri untuk optimalkan nilai.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Dividen</h3>
+                    <p class="text-sm text-slate-600">Kebijakan dividen tidak relevan, nilai perusahaan ditentukan oleh laba.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Diskon Aliran Kas</h3>
+                    <p class="text-sm text-slate-600">Nilai investasi adalah *present value* dari aliran kas masa depan.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Agensi (Agency)</h3>
+                    <p class="text-sm text-slate-600">Potensi konflik kepentingan antara manajer dan pemegang saham.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Informasi Asimetrik</h3>
+                    <p class="text-sm text-slate-600">Manajer memiliki info lebih banyak dari investor, bisa timbulkan masalah.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Portofolio</h3>
+                    <p class="text-sm text-slate-600">Risiko dapat dikurangi dengan diversifikasi atau kombinasi aset.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2 text-blue-700">Opsi (Option)</h3>
+                    <p class="text-sm text-slate-600">Memberi hak (bukan kewajiban) untuk membeli/menjual aset.</p>
+                </div>
+             </div>
+        </section>
+
+        <!-- Slide 7: Tujuan Utama -->
+        <section id="slide-7" class="slide">
+            <h2 class="text-4xl font-bold mb-4 text-blue-800">Bukan Sekadar Mencari Laba</h2>
+            <p class="text-lg text-slate-600 mb-8">Tujuan normatif manajemen keuangan adalah:</p>
+            <div class="bg-blue-600 text-white p-8 rounded-xl shadow-2xl max-w-2xl text-center mb-8">
+                <h3 class="text-4xl font-extrabold">Memaksimalkan Nilai Perusahaan</h3>
+            </div>
+            <p class="text-lg mb-6 max-w-3xl text-center">Ini **berbeda** dari memaksimalkan laba per lembar saham (EPS) karena mempertimbangkan:</p>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-4"><div class="bg-green-100 p-2 rounded-full"><svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><p>Nilai Waktu Uang</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-4"><div class="bg-green-100 p-2 rounded-full"><svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div><p>Faktor Risiko</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-4"><div class="bg-green-100 p-2 rounded-full"><svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg></div><p>Prospek Pertumbuhan</p></div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Peran dan Fungsi -->
+        <section id="slide-8" class="slide bg-slate-100">
+            <h2 class="text-4xl font-bold mb-12 text-blue-800">Peran & Fungsi Manajemen Keuangan</h2>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl w-full">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Peran Manajer Keuangan</h3>
+                    <ul class="space-y-3 text-slate-600 list-disc list-inside">
+                        <li>Mengambil <strong>Keputusan Investasi</strong></li>
+                        <li>Mengambil <strong>Keputusan Pendanaan</strong></li>
+                        <li>Mengambil <strong>Keputusan Dividen</strong></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Fungsi Utama</h3>
+                     <ul class="space-y-3 text-slate-600 list-disc list-inside">
+                        <li>Menjadi pedoman pengambilan keputusan.</li>
+                        <li>Membantu semua departemen berpikir finansial.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Karir -->
+        <section id="slide-9" class="slide">
+            <h2 class="text-4xl font-bold mb-12 text-blue-800">Karir di Dunia Keuangan</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl w-full">
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">Perusahaan Besar</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>Budget Officer</li>
+                        <li>Manajer Keuangan</li>
+                        <li>Finance Director</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">Lembaga Keuangan</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>Financial Analyst</li>
+                        <li>Financial Officer</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">Pasar Modal</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>Analis Sekuritas</li>
+                        <li>Analis Underwriter</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 10: Prinsip -->
+        <section id="slide-10" class="slide bg-slate-100">
+            <h2 class="text-4xl font-bold mb-12 text-blue-800">Prinsip Kunci Manajemen Keuangan</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center"><p class="font-semibold">Konsistensi</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center"><p class="font-semibold">Akuntabilitas</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center"><p class="font-semibold">Transparansi</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center"><p class="font-semibold">Kelangsungan Hidup</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center"><p class="font-semibold">Integritas</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center"><p class="font-semibold">Pengelolaan</p></div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center" colspan="2"><p class="font-semibold">Standar Akuntansi</p></div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Terima Kasih -->
+        <section id="slide-11" class="slide bg-gradient-to-br from-blue-900 to-slate-800 text-white text-center">
+            <h2 class="text-6xl font-bold mb-4">Terima Kasih</h2>
+            <p class="text-2xl text-blue-200">Ada Pertanyaan?</p>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const navContainer = document.getElementById('slide-nav');
+            
+            // Create nav dots
+            slides.forEach((slide, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('nav-dot');
+                dot.dataset.slide = index + 1;
+                dot.addEventListener('click', () => {
+                    slide.scrollIntoView({ behavior: 'smooth' });
+                });
+                navContainer.appendChild(dot);
+            });
+
+            const navDots = document.querySelectorAll('.nav-dot');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.6 
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        const visibleSlideNum = entry.target.id.split('-')[1];
+                        navDots.forEach(dot => {
+                            dot.classList.remove('active');
+                            if (dot.dataset.slide === visibleSlideNum) {
+                                dot.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            slides.forEach(slide => {
+                observer.observe(slide);
+            });
+        });
+    </script>
+
+</body>
+</html>
